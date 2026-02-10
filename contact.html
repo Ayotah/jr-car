@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - PERMIS ACCELERE - Auto Ecole</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        /* WhatsApp Floating Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            border-color: #007bff;  /* Change the border color on focus */
+            outline: none;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+
+        .checkbox-group {
+            margin: 20px 0;
+        }
+
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+
+        .send-form-group {
+            text-align: right;
+        }
+
+        .custom-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .custom-btn:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<a href="https://wa.me/33123456789" target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="28" height="28" fill="white">
+    <path d="M380.9 97.1C339-8.4 238.1-13.2 178.2 46.7L154.4 70.6C139.2 85.8 138.2 107 148.8 125.2L161.3 144.3C169 158.1 169.6 174.9 163.4 189.2L152 208.7C137.5 234.1 112.2 253 83.1 260.1L64.5 263.3C46.5 266.3 28.1 273 12.7 283.5-1.2 293.4-4.3 312 1.8 327.1 15.8 358.3 40.6 388 74.7 409.2L95.8 420.7C111.3 430.2 131.3 430.7 146.8 421.6L157.7 415.1C172 406.3 185 395.2 196 382.2L219.3 355.3C229 344.6 241.4 337 254.9 334.6L290 327.2C317.7 321.4 344 304.7 362.1 281.6C381.1 258 389.2 229.8 384.1 202.1L380.9 174.8C379.5 162.5 377.3 150.3 374.3 138.3 369.3 120.3 357.2 105.5 342.1 97.1Z"/>
+  </svg>
+</a>
+
+<div class="container">
+    <h2>Formulaire de Contact</h2>
+    <p>Pour nous envoyer un message, veuillez remplir et soumettre le formulaire de contact ci-dessous.</p>
+    
+    <form action="https://www.permisaccelere-autoecole.fr/contact-form/send" method="POST">
+        <div class="form-group">
+            <label for="last_name">Nom*:</label>
+            <input type="text" name="last_name" id="last_name" required placeholder="Votre nom">
+        </div>
+
+        <div class="form-group">
+            <label for="first_name">Prénom*:</label>
+            <input type="text" name="first_name" id="first_name" required placeholder="Votre prénom">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email*:</label>
+            <input type="email" name="email" id="email" required placeholder="Votre email">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Téléphone*:</label>
+            <input type="tel" name="phone" id="phone" required placeholder="Votre téléphone">
+        </div>
+
+        <div class="form-group">
+            <label for="content">Décrivez votre demande*:</label>
+            <textarea name="content" id="content" required rows="5" placeholder="Votre message"></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <input type="checkbox" name="rgpd" id="rgpd" required>
+            <label for="rgpd">J'autorise Permis Accéléré à utiliser mes données personnelles dans le cadre de la demande qui en découle.</label>
+        </div>
+
+        <div class="send-form-group">
+            <button type="submit" class="custom-btn">Envoyer le message</button>
+        </div>
+    </form>
+</div>
+<footer>
+  <p class="text-center">© 2026 – Permis Accéléré. Tous droits réservés.</p>
+  <div>
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-instagram"></i>
+  </div>
+</footer>
+</body>
+</html>
